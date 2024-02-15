@@ -17,7 +17,7 @@ final class DiaryListViewModel:ObservableObject {
     }
     
     var keys: [String] {
-        //sorted: 원복은 나두고 오름차순으로 정렬하여 새로운 값을 만듬
-        return dic.keys.sorted { $0 < $1 }
+        return dic.keys.sorted { $0 < $1 } //오름차순으로 정렬 -> 출력: 2022-04, 2022-05 ...
+//        return dic.keys.sorted(by: <) //이렇게도 가능
     }
 }
