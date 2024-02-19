@@ -9,6 +9,10 @@ import SwiftUI
 
 struct DiaryListView: View {
     @StateObject var vm: DiaryListViewModel
+    @State var isPresenting: Bool = false
+    //https://huniroom.tistory.com/entry/SwiftUI-state-property
+    //@State는 View의 상태를 나타내는 변수,
+    //@Binding변수를 사용해 다른뷰에서 갑싱 변경되면 @State변수릐 값도 변경되도록 함
     
     let layout: [GridItem] = [
         GridItem(.flexible()),
@@ -48,6 +52,7 @@ struct DiaryListView: View {
                 HStack {
                     Button {
                         print("New Button Tapped")
+                        isPresenting = true
                     } label: {
                         Image(systemName: "plus")
                             .resizable()
@@ -62,6 +67,11 @@ struct DiaryListView: View {
                 }
             }
             .navigationTitle("Emotion Diary")
+        }
+        .sheet(isPresented: $isPresenting) {
+            let vm = DiaryViewModel(isPresented: $isPresenting)
+            DiaryDateInputView(vm: vm)
+//            DiaryDateInputView(isPresented: $isPresenting)
         }
     }
 }

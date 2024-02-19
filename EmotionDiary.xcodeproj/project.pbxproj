@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0CAF1E2B835454005C4DDC /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CAF1D2B835454005C4DDC /* DiaryViewModel.swift */; };
 		3AFC9F7C2B7B9670000D4991 /* MoodDiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC9F7B2B7B9670000D4991 /* MoodDiaryCell.swift */; };
 		3AFC9F802B7B99C5000D4991 /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC9F7F2B7B99C5000D4991 /* DiaryListViewModel.swift */; };
 		948F9013287008D100F90257 /* EmotionDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F9012287008D100F90257 /* EmotionDiaryApp.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A0CAF1D2B835454005C4DDC /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
 		3AFC9F7B2B7B9670000D4991 /* MoodDiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDiaryCell.swift; sourceTree = "<group>"; };
 		3AFC9F7F2B7B99C5000D4991 /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		948F900F287008D100F90257 /* EmotionDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 		948F904A287009F600F90257 /* Diary Creation */ = {
 			isa = PBXGroup;
 			children = (
+				3A0CAF1D2B835454005C4DDC /* DiaryViewModel.swift */,
 				948F9041287009AE00F90257 /* DiaryDateInputView.swift */,
 				948F9043287009C000F90257 /* DiaryMoodInputView.swift */,
 				948F9045287009CB00F90257 /* DiaryTextInputView.swift */,
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0CAF1E2B835454005C4DDC /* DiaryViewModel.swift in Sources */,
 				3AFC9F7C2B7B9670000D4991 /* MoodDiaryCell.swift in Sources */,
 				948F9015287008D100F90257 /* DiaryListView.swift in Sources */,
 				948F9013287008D100F90257 /* EmotionDiaryApp.swift in Sources */,
