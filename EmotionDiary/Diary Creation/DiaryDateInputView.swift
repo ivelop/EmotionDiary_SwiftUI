@@ -16,13 +16,31 @@ struct DiaryDateInputView: View {
     @StateObject var vm: DiaryViewModel
     
     var body: some View {
-        VStack {
-            DatePicker(
-                "Start Date",
-                selection: $vm.date,
-                displayedComponents: [.date]
-            )
-            .datePickerStyle(.graphical)
+        NavigationView {
+            VStack {
+                DatePicker(
+                    "Start Date",
+                    selection: $vm.date,
+                    displayedComponents: [.date]
+                )
+                .datePickerStyle(.graphical)
+                .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0))
+                Spacer()
+                
+                NavigationLink { //NavigationLink는 NavigationView안에서 사용
+                    DiaryMoodInputView()
+                } label: {
+                    Text("Next")
+                        .frame(width: 200, height: 80)
+                        .background(Color.pink)
+                        .foregroundColor(.white)
+                        .cornerRadius(40)
+                        .font(.system(size: 20, weight: .medium))
+                }
+                
+                
+                
+            }
         }
     }
 }
