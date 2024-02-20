@@ -15,6 +15,8 @@ struct DiaryDateInputView: View {
 //
     @StateObject var vm: DiaryViewModel
     
+    
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -28,7 +30,7 @@ struct DiaryDateInputView: View {
                 Spacer()
                 
                 NavigationLink { //NavigationLink는 NavigationView안에서 사용
-                    DiaryMoodInputView()
+                    DiaryMoodInputView(vm: self.vm)
                 } label: {
                     Text("Next")
                         .frame(width: 200, height: 80)
@@ -47,7 +49,7 @@ struct DiaryDateInputView: View {
 
 struct DiaryDateInputView_Previews: PreviewProvider {
     static var previews: some View {
-        let vm = DiaryViewModel(isPresented: .constant(true))
+        let vm = DiaryViewModel(isPresented: .constant(false))
         DiaryDateInputView(vm: vm)
 //        DiaryDateInputView(isPresented: .constant(false))
     }
