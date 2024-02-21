@@ -48,7 +48,7 @@ struct DiaryMoodInputView: View {
             Spacer()
             
             NavigationLink { //DiaryDateInputView에서 NavigationView 사용해서 NavigationView뷰 없이 사용가능?
-                DiaryTextInputView()
+                DiaryTextInputView(vm: self.vm)
             } label: {
                 Text("Next")
                     .frame(width: 200, height: 80)
