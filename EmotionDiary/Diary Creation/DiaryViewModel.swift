@@ -10,6 +10,9 @@ import SwiftUI
 import Combine
 
 final class DiaryViewModel: ObservableObject {
+    @Published var diaries: Binding<[MoodDiary]>
+    //Binding 구조체를 사용해 자식이 값을 변경하면 부모의 값도 변경되도록함, 부모가 자식에게 값을 '$'로 넘겨줘야함
+    //ex) let vm = DiaryViewModel(isPresented: $isPresenting, diaries: $vm.list)
     @Published var diary: MoodDiary = MoodDiary(date: "", text: "", mood: .great)
     
     @Published var date: Date = Date()
@@ -19,8 +22,9 @@ final class DiaryViewModel: ObservableObject {
     
     var subscriptions = Set<AnyCancellable>()
     
-    init(isPresented: Binding<Bool>) {
+    init(isPresented: Binding<Bool>, diaries: Binding<[MoodDiary]>) {
         self.isPresented = isPresented
+        self.diaries = diaries
         
         $date.sink{
             print("selected date ---> \($0)")
@@ -58,6 +62,7 @@ final class DiaryViewModel: ObservableObject {
         guard diary.text.isEmpty == false else { return }
         
         print("전체 리스트 추가")
+        diaries.wrappedValue.append(diary)
         isPresented.wrappedValue = false
     }
 }

@@ -62,7 +62,7 @@ struct DiaryMoodInputView: View {
 
 struct DiaryMoodInputView_Previews: PreviewProvider {
     static var previews: some View {
-        let vm = DiaryViewModel(isPresented: .constant(false))
+        let vm = DiaryViewModel(isPresented: .constant(false), diaries: .constant(MoodDiary.list))
         DiaryMoodInputView(vm: vm)
     }
 }

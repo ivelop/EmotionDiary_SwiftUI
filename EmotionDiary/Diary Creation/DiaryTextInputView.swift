@@ -39,6 +39,6 @@ struct DiaryTextInputView: View {
 
 struct DiaryTextInputView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryTextInputView(vm: DiaryViewModel(isPresented: .constant(false)))
+        DiaryTextInputView(vm: DiaryViewModel(isPresented: .constant(false), diaries: .constant(MoodDiary.list)))
     }
 }
