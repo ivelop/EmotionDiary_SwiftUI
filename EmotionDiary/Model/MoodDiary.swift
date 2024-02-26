@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct MoodDiary: Identifiable, Codable {
+//Equatable은 DiaryDetailsViewModel에서 diary의 인데스를 찾는데 필요, diaries.wrappedValue[$0] == diary 같은 값인지 비교할 때
+struct MoodDiary: Identifiable, Codable, Equatable {
     var id: UUID = UUID()
     var date: String
     var text: String

@@ -11,30 +11,35 @@ struct DiaryDetailsView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    var diary: MoodDiary
+    @StateObject var vm: DiaryDetailsViewModel
+//    var diary: MoodDiary //vm의 diary로 대체함
     
     var body: some View {
         VStack{
             ScrollView {
                 VStack(spacing: 50) {
-                    Text(formattedDate(dateString: diary.date))
+                    Text(formattedDate(dateString: vm.diary.date))
                         .font(.system(size: 30, weight: .bold))
-                    Image(systemName: diary.mood.imageName)
+                    Image(systemName: vm.diary.mood.imageName)
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 0)
                         .frame(height: 100)
-                    Text(diary.text.description)
+                    Text(vm.diary.text.description)
                         .font(.system(size: 20, weight: .medium))
                         .foregroundColor(colorScheme == .dark ? .white:.black)
                     }
+                .frame(maxWidth: .infinity) //스크롤바가 가장 끝쪽에 나오도록함
                 }
+
+
             Spacer()
             
             HStack {
                 Button {
                     print("Delete button tapped")
+                    vm.delete()
                 } label: {
                     Image(systemName: "trash")
                         .renderingMode(.original)
@@ -66,6 +71,7 @@ extension DiaryDetailsView {
 
 struct DiaryDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryDetailsView(diary: MoodDiary.list.first!)
+        let vm = DiaryDetailsViewModel(diaries: .constant(MoodDiary.list), diary: MoodDiary.list.first!)
+        DiaryDetailsView(vm: vm)
     }
 }

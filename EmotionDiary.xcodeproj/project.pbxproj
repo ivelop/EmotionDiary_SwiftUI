@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A0CAF1E2B835454005C4DDC /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CAF1D2B835454005C4DDC /* DiaryViewModel.swift */; };
+		3A0CAF222B8CE77C005C4DDC /* DiaryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CAF212B8CE77C005C4DDC /* DiaryDetailsViewModel.swift */; };
 		3AFC9F7C2B7B9670000D4991 /* MoodDiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC9F7B2B7B9670000D4991 /* MoodDiaryCell.swift */; };
 		3AFC9F802B7B99C5000D4991 /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC9F7F2B7B99C5000D4991 /* DiaryListViewModel.swift */; };
 		948F9013287008D100F90257 /* EmotionDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F9012287008D100F90257 /* EmotionDiaryApp.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		3A0CAF1D2B835454005C4DDC /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
+		3A0CAF212B8CE77C005C4DDC /* DiaryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailsViewModel.swift; sourceTree = "<group>"; };
 		3AFC9F7B2B7B9670000D4991 /* MoodDiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDiaryCell.swift; sourceTree = "<group>"; };
 		3AFC9F7F2B7B99C5000D4991 /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		948F900F287008D100F90257 /* EmotionDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				948F9047287009DA00F90257 /* DiaryDetailsView.swift */,
+				3A0CAF212B8CE77C005C4DDC /* DiaryDetailsViewModel.swift */,
 			);
 			path = "Diary Details";
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				948F905528700A8800F90257 /* MoodDiaryStorage.swift in Sources */,
 				948F9044287009C000F90257 /* DiaryMoodInputView.swift in Sources */,
 				948F9048287009DA00F90257 /* DiaryDetailsView.swift in Sources */,
+				3A0CAF222B8CE77C005C4DDC /* DiaryDetailsViewModel.swift in Sources */,
 				948F904F28700A2C00F90257 /* Mood.swift in Sources */,
 				948F905428700A8800F90257 /* Storage.swift in Sources */,
 				3AFC9F802B7B99C5000D4991 /* DiaryListViewModel.swift in Sources */,

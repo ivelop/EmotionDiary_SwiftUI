@@ -32,7 +32,8 @@ struct DiaryListView: View {
                                 
                                 ForEach(orderedItems) { item in
                                     NavigationLink {
-                                        DiaryDetailsView(diary: item)
+                                        let vm = DiaryDetailsViewModel(diaries: $vm.list, diary: item)
+                                        DiaryDetailsView(vm: vm)
                                     } label: {
                                         MoodDiaryCell(diary: item)
                                             .frame(height: 50)
@@ -69,7 +70,7 @@ struct DiaryListView: View {
         .sheet(isPresented: $isPresenting) {
             let vm = DiaryViewModel(isPresented: $isPresenting, diaries: $vm.list)
             //@Binding 구조체를 사용해 자식이 값을 변경하면 부모의 값도 변경되도록함, 부모가 자식에게 값을 '$'로 넘겨줘야함
-            DiaryDateInputView(vm: vm)
+            DiaryDateInputView(vm: vm) 
 //            DiaryDateInputView(isPresented: $isPresenting)
         }
         .onAppear {
